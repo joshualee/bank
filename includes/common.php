@@ -22,7 +22,6 @@
     // requirements
     require_once("constants.php");
     require_once("helpers.php");
-    require_once("stock.php");
 
     // require authentication for most pages
     if (!preg_match("/(:?log(:?in|out)|register)\d*\.php$/", $_SERVER["PHP_SELF"]))
