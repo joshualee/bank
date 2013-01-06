@@ -13,7 +13,8 @@
     //     apologize("You must write something.");
     
     $name = mysql_query("SELECT username FROM users WHERE uid=$uid");
-    $name = mysql_fetch_array($name)["username"];
+    $name = mysql_fetch_array($name);
+    $name = $name["username"];
     
     $insert = mysql_query("INSERT INTO feedback (user_id, message, name) VALUES ($uid, '$message', '$name')");    
                             
