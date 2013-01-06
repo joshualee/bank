@@ -5,12 +5,12 @@
     
     $uid = $_SESSION["uid"];
     
-    $message = mysql_real_escape_string($_POST["message"]);
-    // $message = $_POST["message"];
+    // $message = mysql_real_escape_string($_POST["message"]);
+    $message = $_POST["message"];
     
     // ensure valid user input
-    if($message == "")
-        apologize("You must write something.");
+    // if($message == "")
+    //     apologize("You must write something.");
     
     $name = mysql_query("SELECT username FROM users WHERE uid=$uid");
     $name = mysql_fetch_array($name)["username"];
