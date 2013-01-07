@@ -4,12 +4,12 @@
     require_once("includes/common.php"); 
 
     // escape username and password for safety
-    // $username = mysql_real_escape_string($_POST["username"]);
-    // $password = mysql_real_escape_string($_POST["password"]);
+    $username = mysql_real_escape_string($_GET["username"]);
+    $password = mysql_real_escape_string($_GET["password"]);
     // $username = $_POST["username"];
     // $password = $_POST["password"];
-    $username = $_GET["username"];
-    $password = $_GET["password"];
+    // $username = $_GET["username"];
+    // $password = $_GET["password"];
 
     // prepare SQL
     $sql = "SELECT uid FROM users WHERE username='$username' AND password='$password'";
