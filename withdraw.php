@@ -5,7 +5,8 @@
     
     $uid = $_SESSION["uid"];
     // $amount = mysql_real_escape_string($_POST["amount"]);
-    $amount = intval($_POST["amount"]);
+    // $amount = intval($_POST["amount"]);
+    $amount = intval($_GET["amount"]);
     
     // ensure valid user input
     // if(!preg_match("/^\d+$/", $amount))

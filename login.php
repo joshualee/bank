@@ -11,7 +11,7 @@
     <body>
         <?php include 'partials/navigation.php'; ?>
         <div class='container'>
-            <form action="login2.php" method="post">
+            <form action="login2.php" method="get">
                 <legend>Log in</legend>
                 <label>Username</label>
                 <input type="text" name="username"></input>

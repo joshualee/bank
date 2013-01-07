@@ -20,7 +20,7 @@
             <h3> Balance </h3>
             <p> Your current balance is $<span id="currentcash"><? printf("%.2f", $user["cash"]) ?></span>.</p>
             
-            <form action="withdraw.php" method="post" id="withdraw-form" class="form-inline">
+            <form action="withdraw.php" method="get" id="withdraw-form" class="form-inline">
                 <div class="input-prepend">
                   <span class="add-on">$</span>
                   <input type="text" name="amount" class="input-small" placeholder="amount">
@@ -44,6 +44,14 @@
                 <textarea name="message" rows="3" placeholder=""></textarea>
                 <br>
                 <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+            
+            <form action="search.php" method="get" id="search-form" class="form-inline">
+                <div class="input-prepend">
+                  <input type="text" name="search" class="input-small">
+                </div>
+                <button type="submit" class="btn btn-success btn-small">Search</button>
+                <span id="search-error" class="error"></span>
             </form>
         </div>
     </body>
